@@ -1,0 +1,83 @@
+.modal{
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    padding-left: 10%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    animation: open 0.5s forwards linear;
+    &__container{
+        width: porcentaje(1200);
+        height: 579px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        animation: open 0.5s forwards linear;
+    }
+    &__info{
+        width: 565px;
+        height: auto;
+        color: #fffffe;
+    }
+    &__overview{
+        height: 135px;
+        width: 565.95751953125px;
+        margin-top: 8px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    &__date{
+        height: 35px;
+        width: 349px;
+        padding: 8px, 0px, 0px, 0px;
+        margin-top: 8px;
+    }
+    &__wrapperButton{
+        height: 48px;
+        width: 565.95751953125px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button{
+        @include button(274px,rgba(254, 217, 65, 1));
+        &--black{
+            @include button(274px,rgba(12, 14, 22, 1))
+        }
+    }
+    &__card{
+        width: 220px;
+        height: 330px;
+        border-radius: 8px;
+        position: relative;
+    }
+    &__exit{
+        height: 32px;
+        width: 32px;
+        left: 1251px;
+        top: 50px;
+        position: absolute;
+    }
+}
+
+@keyframes open {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

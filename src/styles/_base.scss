@@ -1,0 +1,126 @@
+$color-blue:#0F0E17;
+$color-black:#000000;
+$color-yellow:#FED941;
+$color-gey: #A7A9BE;
+$color-white: #FFFFFE;
+
+$font : 'Montserrat', sans-serif;
+$font-2:'Inter', sans-serif;
+
+
+@function porcentaje($width){
+    @return  $width * 100%/1366;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    background-color: $color-blue;
+}
+h1{
+   
+    font-family: $font ;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+h2{
+    font-family: $font;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -0.005em;
+    text-align: left;
+}
+h3{
+    //styleName: Headline 3;
+    font-family: $font-2;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.body-1-bold{
+
+    font-family: $font ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.body-1{
+    @extend .body-1-bold;
+    font-weight: 400;
+
+}
+.body-2-bold{
+    //styleName: Body 2/Bold;
+    font-family: $font ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.body-2{
+    @extend .body-2-bold;
+    font-weight: 400;
+}
+.caption{
+    //styleName: Caption;
+    font-family: $font ;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+
+@mixin button($width, $color) {
+    width: $width;
+    height: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    @if($color == rgba(12, 14, 22, 1)){
+        background-color: $color;
+        color:  rgba(254, 217, 65, 1);
+        border: 1px solid rgba(254, 217, 65, 1);
+    }@else{
+        background-color: rgba(254, 217, 65, 1);
+        color:  rgba(12, 14, 22, 1);
+        border: none;
+    }
+    //styleName: BUTTON;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    img{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+    }
+}

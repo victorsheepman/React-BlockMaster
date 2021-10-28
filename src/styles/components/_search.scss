@@ -1,0 +1,23 @@
+.Search{
+    width: auto;
+    height: 44px;
+    display: flex;
+    input{
+        height: 44px;   
+        width: 605px;
+        border-radius: 8px 0 0 8px;
+        border: 1px solid #FED941;
+        padding-left: 12px;
+    }
+    button{
+        width: 72px;
+        height: 44px;
+        background-color: #fed941;
+        border-radius: 0 4px 4px 0;
+        border: none;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

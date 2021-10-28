@@ -1,0 +1,36 @@
+.caorusel{
+    width: 1200px;
+    height: 330px;
+    margin-left: porcentaje(78);
+    border-radius: 8px;
+    figure{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+}
+.Wrapper{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/2);
+    height: 100px;
+    font-family: Signika;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: solid 1px black;
+    background-color: #61DAFB;
+}
