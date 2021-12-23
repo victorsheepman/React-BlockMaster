@@ -1,0 +1,47 @@
+.nav{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: $color-blue;
+    padding: 16px;
+    z-index: 2;
+    &__wrapper{
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+       
+    }
+    &__exit{
+        height: 32px;
+        width: 32px;
+        left: 85%;
+        top: 5%;
+        position: absolute;
+    }
+    &__menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: center;   
+        text-decoration: none;
+        list-style: none;
+        li{
+            color: $color-white;
+            list-style: none;
+            margin-bottom: 25px;
+
+        }
+    }
+}

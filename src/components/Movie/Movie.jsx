@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal } from "../components/Modal";
+import { Modal } from "../Modal/Modal";
 const Movie = (props)=> {
     const [modal, setModal] = useState(false);
     const handleClick =()=>{

@@ -11,7 +11,7 @@ export const Modal = (props) => {
         <div className='modal'>
             <div className='modal__container'>
                 <article className='modal__info'>
-                    <h1>{props.title}</h1>
+                    <h1 className='modal__title'>{props.title}</h1>
                     <span className='modal__overview'>{props.overview}</span>
                     <div className='modal__date'></div>
                     <div className='modal__wrapperButton'>

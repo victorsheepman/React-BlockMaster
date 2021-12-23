@@ -1,11 +1,9 @@
-import React,{useReducer, useEffect} from 'react';
-import { Movie } from "../components/Movie";
-import { MovieList } from "../containers/MovieList";
-import movieReducer, { initialState } from '../reducers/reducer';
-
+import React,{useEffect, useContext} from 'react';
+import { Movie } from "../components/Movie/Movie";
+import { MovieList } from "../containers/MovieList/MovieList";
+import AppContext from '../context/AppContext';
 const MostValued = ()=> {
-    const [state, dispatch]=useReducer(movieReducer, initialState);
-
+    const {state,dispatch} = useContext(AppContext);
     useEffect(()=>{
          dispatch({
             type:'SET_FILTER',
@@ -13,7 +11,6 @@ const MostValued = ()=> {
         })
     },[])
     const ids = state.list[state.filter];
-    console.log(ids);
     const movieList = state.movieList;
     return (
         <MovieList>

@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import AppContext from "../context/AppContext";
-
+import AppContext from "../../context/AppContext";
 
 const Search = ()=>{
-    const { setSearch} = useContext(AppContext);
+    
+    const { setSearch } =useContext(AppContext);
     let movieSearch = '';    
     const history = useHistory();
+
+    //obtener el valor del input
     const onSearchValueChange = (event) => {
+        console.log(event.target.value);
         movieSearch = event.target.value;
+
     }
+
+    //buscar pelicula
     const handleSubmit = (event)=>{
         event.preventDefault();
         setSearch(movieSearch)

@@ -8,6 +8,9 @@
         object-fit: cover;
         border-radius: 8px;
     }
+    @include small{
+        height: 120px;
+    }
 }
 .normal{
     position: absolute;
@@ -32,6 +35,22 @@
     img{
         width: 24px;
         height: 24px;
+    }
+    @include small{
+        width: 57px;
+        height: 32px;
+        top: 8px;
+        font-family: $font ;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        img{
+            width: 14px;
+            height: 14px;
+        }
     }
 }
 .recommended{

@@ -1,9 +1,10 @@
 import React, { useEffect, useReducer } from 'react';
-import { Movie } from "../components/Movie";
-import { MovieList } from "../containers/MovieList";
-import movieReducer, { initialState } from '../reducers/reducer';
-
+import { Movie } from "../components/Movie/Movie";
+import { MovieList } from "../containers/MovieList/MovieList";
+import movieReducer from '../reducers/reducer';
+import { useinitialState } from '../Hooks/InitialState'
 const LeastValued = () =>{
+    const {initialState} = useinitialState();
     const [state, dispatch]=useReducer(movieReducer, initialState);
 
     useEffect(()=>{

@@ -1,0 +1,48 @@
+.Header{
+    width: 100%;
+    background-color: $color-blue;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include small{
+        width: 100%;
+        height: 56px;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        div{
+            width: 72px;
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__icon{ 
+            width: 24px;
+            height: 24px;
+            svg{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    @include tablet{
+        div{
+            width: 300px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+.layout__button{
+    @extend .modal__button;
+    margin-left: 40%;
+    margin-bottom: 2px;
+    @include small{
+        margin-left: 0px;
+    }
+}

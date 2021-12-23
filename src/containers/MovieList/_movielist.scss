@@ -6,6 +6,14 @@
 	margin: 3em 0 0 0;
 	margin-bottom: 30px;
 	animation: open 0.5s forwards linear;
+	@include small{
+		grid-template-columns: repeat(auto-fill,80px);
+		gap: 12px;
+	}
+	@include tablet{
+		grid-template-columns: repeat(auto-fill,180px);
+		gap: 12px;
+	}
 }
 
 

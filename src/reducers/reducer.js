@@ -1,18 +1,4 @@
-import DB from "../utils/DB"
-import { movieListAsMap, getAllIds, getLeastValuedIds,getMostValuedIds   } from "../utils/normalize";
-import { useState, useEffect } from "react";
-const API = 'https://api.themoviedb.org/3/discover/movie?api_key=ffae6ceb377fb3d244739ecd9b2c1a1d'
-
-export const initialState={
-    movieList: movieListAsMap(DB),
-    filter: 'all',
-    list:{
-        all: getAllIds(DB),
-        mostValued: getMostValuedIds(DB),
-        leastValued: getLeastValuedIds(DB),
-    },
-}
-
+import { movieListAsMap, getAllIds, getLeastValuedIds,getMostValuedIds   } from "../utils/normalize";;
 const movieReducer = (state,action) => {
     switch (action.type) {
         case 'ADD_MOVIES':
@@ -20,6 +6,7 @@ const movieReducer = (state,action) => {
             const all = getAllIds(action.payload, state.list.all)
             const leastValued = getLeastValuedIds(action.payload, state.list.leastValued)
             const mostValued = getMostValuedIds(action.payload, state.list.mostValued)
+            
             return {
                 ...state,
                 movieList,

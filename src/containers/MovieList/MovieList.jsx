@@ -1,8 +1,4 @@
 import React from "react";
-
-import { Movie } from "../components/Movie";
-import { useSearch } from "../Hooks/useSearch";
-
 const MovieList = ({children})=>{
   
     return(

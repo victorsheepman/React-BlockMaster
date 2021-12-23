@@ -1,0 +1,60 @@
+
+@mixin button($width, $color) {
+    width: $width;
+    height: 48px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    @if($color == rgba(12, 14, 22, 1)){
+        background-color: $color;
+        color:  rgba(254, 217, 65, 1);
+        border: 1px solid rgba(254, 217, 65, 1);
+    }@else{
+        background-color: rgba(254, 217, 65, 1);
+        color:  rgba(12, 14, 22, 1);
+        border: none;
+    }
+    //styleName: BUTTON;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    img{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+    }
+    @include small{
+      width: 100%;
+      border-radius: 4px;
+    }
+}
+
+@mixin small {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+}
+  
+@mixin medium {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+}
+  
+@mixin large {
+    @media only screen and (min-width: 1440px) {
+      @content;
+    }
+}
+@mixin tablet {
+  @media only screen and (max-width: 768px ) and (min-width: 600px)  {
+    @content;
+  }
+}

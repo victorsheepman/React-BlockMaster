@@ -1,0 +1,22 @@
+@import './styles/colors';
+@import './styles/fonts';
+@import './styles/mixins';
+@import './styles/base';
+
+//containers
+@import './containers/Header/header';
+@import './containers/MovieList/movielist';
+
+
+//components
+@import './components/Carousel/carousel';
+@import './components/Nav/Nav';
+@import './components/Error/error';
+@import './components/Filter/filter';
+@import './components/Modal/modal';
+@import './components/Movie/movie';
+@import './components/Search/search';
+@import './components/ModalSearch/ModalSearch';
+
+
+

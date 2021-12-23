@@ -1,14 +1,19 @@
 import React from 'react';
-import {Layout} from '../containers/Layout'
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import {Layout} from '../containers/Layout/Layout'
+import {BrowserRouter,Switch, Route, Redirect} from 'react-router-dom'
 import { Home } from '../Pages/Home';
 import { MostValued } from '../Pages/MostValued';
 import { LeastValued } from '../Pages/LeastValued';
 import { SearchPage } from '../Pages/SearchPage';
 import AppContext from '../context/AppContext';
 import { useSearch } from '../Hooks/useSearch';
+import { ModalSearch } from '../components/ModalSearch/ModalSearch';
+import { useinitialState} from '../Hooks/InitialState';
+
 const App = () => {
-    const globalState = useSearch();
+    const globalState = useinitialState();
+
+ 
     return (
         <AppContext.Provider value={globalState}>
         <BrowserRouter>
