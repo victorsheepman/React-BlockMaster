@@ -1,10 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
-
-const Filter =()=>{
-    return(
+export const Filter =()=>(
             <ul className="Filter" >
                 <li>
                     <NavLink className='inactive' to='/home'>Todas</NavLink>    
@@ -18,5 +15,3 @@ const Filter =()=>{
                 </li>
             </ul>
     )
-}
-export {Filter}

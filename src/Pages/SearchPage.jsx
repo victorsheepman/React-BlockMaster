@@ -4,7 +4,6 @@ import { Movie } from '../components/Movie/Movie';
 import { MovieList } from '../containers/MovieList/MovieList';
 import { Error } from '../components/Error/Error';
 import AppContext from '../context/AppContext';
-import { useSearch } from '../Hooks/useSearch';
 export const SearchPage = () => {
     const {movie}=useContext(AppContext);
     console.log(movie);

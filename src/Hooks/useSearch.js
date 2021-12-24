@@ -1,6 +1,4 @@
 import React from "react";
-import DB from "../utils/DB";
-
 function filterByTitle(title, movies) {
     const list = []
     movies.forEach((movie) => {
@@ -28,7 +26,6 @@ function searchMovie(query, list, allIds) {
 
 export const useSearch =(state)=>{
     const [search, setSearch]=React.useState('');
-    //const movie = state.filter((movie)=>movie.title.toLowerCase().includes(search.toLowerCase()));
     const movie = searchMovie(search,state.movieList, state.list.all)
     const [openModal, setOpenModal] = React.useState(false);
     return {

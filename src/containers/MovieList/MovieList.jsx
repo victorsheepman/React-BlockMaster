@@ -1,7 +1,5 @@
 import React from "react";
-const MovieList = ({children})=>{
-  
-    return(
+const MovieList = ({children})=>(
         <div className="Main-container">
             <section className="MovieList">
                 {children}
@@ -9,5 +7,4 @@ const MovieList = ({children})=>{
         </div>
 
     )
-}
 export {MovieList}

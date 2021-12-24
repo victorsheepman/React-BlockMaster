@@ -4,12 +4,13 @@ import {Header} from '../Header/Header';
 import AppContext from '../../context/AppContext';
 const Layout = ({children})=>{
     const{setPage, page} = useContext(AppContext);
+    const url = location.pathname;
     return(
         <div className="Layout">
             <Header />
-            {/*<Carousel />*/}
+            <Carousel />
             {children}
-            <button className='layout__button' onClick={()=>setPage(page + 1)}>mas</button>
+            {url == '/search' ? '' : <button className='layout__button' onClick={()=>setPage(page + 1)}>mas</button>}
         </div>
     )
 }

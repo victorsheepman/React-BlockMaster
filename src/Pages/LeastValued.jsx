@@ -14,13 +14,13 @@ const LeastValued = () =>{
         })
     },[])
     const ids = state.list[state.filter];
-    console.log(ids);
     const movieList = state.movieList;
     return (
         <MovieList>
             {ids.map((movie)=>(
                 <Movie key={movie.id} {...movieList.get(movie)}/>
             ))}
+             
         </MovieList>
     );
 }
