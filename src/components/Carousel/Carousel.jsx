@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Rerousel } from 'rerousel';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 export const Carousel = () => {
