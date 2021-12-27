@@ -39,7 +39,7 @@
     }
 }
 .layout__button{
-    @extend .modal__button;
+    @extend .modalMovie__button;
     margin-left: 40%;
     margin-bottom: 2px;
     @include small{
